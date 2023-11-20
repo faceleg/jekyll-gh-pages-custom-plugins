@@ -1,17 +1,10 @@
-# Needs to match version specified in config for ruby/setup-ruby@v1
-FROM ruby:3.1.4
+# FROM ruby:3.1.4
+FROM buildpack-deps:bookworm
 
 # Set default locale for the environment	
 ENV LC_ALL C.UTF-8	
 ENV LANG en_US.UTF-8	
 ENV LANGUAGE en_US.UTF-8	
-
-LABEL "com.github.actions.name"="Build & Deploy to GitHub Pages"	
-LABEL "com.github.actions.description"="Builds & deploys Jekyll to gh-pages branch of the same repository. "	
-LABEL "com.github.actions.icon"="globe"	
-LABEL "com.github.actions.color"="green"	
-
-LABEL "repository"="http://github.com/Li357/jekyll-deploy-gh-pages"	
 
 # Install NodeJS
 RUN apt-get update && apt-get install -y ca-certificates curl gnupg && apt-get clean
