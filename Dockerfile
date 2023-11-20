@@ -1,4 +1,4 @@
-# This is the main Dockerfile for this repository
+# Needs to match version specified in config for ruby/setup-ruby@v1
 FROM ruby:3.1.4
 
 # Set default locale for the environment	
